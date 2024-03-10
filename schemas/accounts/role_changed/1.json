@@ -1,30 +1,23 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
 
-  "title": "Billing.Refund.v1",
-  "description": "json schema for billing refund event (version 1)",
+  "title": "Accounts.RoleChanged.v1",
+  "description": "json schema for BE account events (version 1)",
 
   "definitions": {
     "event_data": {
       "type": "object",
       "properties": {
-        "order_id": {
-          "type": "integer"
-        },
-        "reason": {
+        "public_id": {
           "type": "string"
         },
-        "account_uuid": {
-          "type": "string"
-        },
-        "timestamp": {
+        "role": {
           "type": "string"
         }
       },
       "required": [
-        "order_id",
-        "account_uuid",
-        "timestamp"
+        "public_id",
+        "role"
       ]
     }
   },
@@ -34,7 +27,7 @@
   "properties": {
     "event_id":      { "type": "string" },
     "event_version": { "enum": [1] },
-    "event_name":    { "type": "string" },
+    "event_name":    { "enum": ["AccountRoleChanged"] },
     "event_time":    { "type": "string" },
     "producer":      { "type": "string" },
 
@@ -50,4 +43,3 @@
     "data"
   ]
 }
-

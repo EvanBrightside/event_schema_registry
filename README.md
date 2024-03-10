@@ -7,7 +7,7 @@ This repository is an example of how to make event schema registry for JSON sche
 Add this line into your Gemfile:
 
 ```
-gem "schema_registry", git: "https://github.com/EvanBrightside/event_schema_registry.git"
+gem "schema_registry", git: "https://github.com/davydovanton/event_schema_registry.git"
 ```
 
 ## How to add a new event schema
